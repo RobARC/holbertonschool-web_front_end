@@ -310,7 +310,7 @@ a:active {
 }
 
 .nav .nav-link{
-    display: var(--nav-item-display);
+    display: block;
     padding: 0.5rem, 1rem;
 }
 
