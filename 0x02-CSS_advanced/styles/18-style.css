@@ -311,7 +311,7 @@ a:active {
 
 .nav .nav-link{
     display: var(--nav-item-display);
-    padding: 0.5rem, 1rem, 0.5rem, 1rem;
+    padding: 0.5rem, 1rem;
 }
 
 .nav .nav-link:hover{
