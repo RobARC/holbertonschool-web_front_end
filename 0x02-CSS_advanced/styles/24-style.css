@@ -373,7 +373,7 @@ ul.row {
     .social-link > svg {
         fill: var(--text-color);
     }
-.card-services .card-tilte {
+.card-services .card-title {
     margin: 0;
 }
 
