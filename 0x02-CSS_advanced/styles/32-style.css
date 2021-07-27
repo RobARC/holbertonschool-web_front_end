@@ -266,11 +266,11 @@ a:active {
     text-decoration: var(--button-text-decoration);
 }
 
-    .button:hover {
+    .button:hover { 
         color: var(--button-hover-color);
         text-decoration: var(--button-hover-text-decoration);
         background: var(--button-hover-background);
-        transition-duration: var(--transition-duration);
+        transition: var(--transition-duration);
         transition-property: color, background-color;
     }
 
@@ -550,11 +550,11 @@ ul.row {
         z-index: -1;
     }
 
-.card-work:hover .card.image {
+.card-work:hover .card-image {
     transform: scale(1.2);
     transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 
-.card-work:hover .card-outer {
+.card-work:hover .card-outer{
     transform: scale(0.95);
 }
