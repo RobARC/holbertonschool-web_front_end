@@ -3,9 +3,9 @@
 ## Resources
 <b>Read or watch:</b>
 
-<li>[Sass Basics](https://intranet.hbtn.io/rltoken/ayoQ7NtS8w7tZvyeqhkzsw)</li>
-<li>[Sass flow control directives: @if, @for, @each and @while](https://intranet.hbtn.io/rltoken/EfIlJ77YiDugDGSaab8UUg)</li>
-<li>[Sass references](https://intranet.hbtn.io/rltoken/P7jm16HEuQb1FxMqlajjFQ)</li>
+<li>##### [Sass Basics](https://intranet.hbtn.io/rltoken/ayoQ7NtS8w7tZvyeqhkzsw)</li>
+<li>##### [Sass flow control directives: @if, @for, @each and @while](https://intranet.hbtn.io/rltoken/EfIlJ77YiDugDGSaab8UUg)</li>
+<li>##### [Sass references](https://intranet.hbtn.io/rltoken/P7jm16HEuQb1FxMqlajjFQ)</li>
 
 
 ## Learning Objectives
