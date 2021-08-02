@@ -1,0 +1,92 @@
+/* Sort! */
+
+@import "103-sort_list";
+
+
+$collation: "\00", "\01", "\02", "\03", "\04", "\05", "\06", "\07",
+            "\08", "\09", /* newlines not possible */ "\0B", "\0C", "\0D", "\0E", "\0F",
+            "\10", "\11", "\12", "\13", "\14", "\15", "\16", "\17",
+            "\18", "\19", "\1A", "\1B", "\1C", "\1D", "\1E", "\1F",
+            "\20", "\21", "\22", "\23", "\24", "\25", "\26", "\27",
+            "\28", "\29", "\2A", "\2B", "\2C", "\2D", "\2E", "\2F",
+            "\30", "\31", "\32", "\33", "\34", "\35", "\36", "\37",
+            "\38", "\39", "\3A", "\3B", "\3C", "\3D", "\3E", "\3F",
+            "\40", "\41", "\42", "\43", "\44", "\45", "\46", "\47",
+            "\48", "\49", "\4A", "\4B", "\4C", "\4D", "\4E", "\4F",
+            "\50", "\51", "\52", "\53", "\54", "\55", "\56", "\57",
+            "\58", "\59", "\5A", "\5B", "\5C", "\5D", "\5E", "\5F",
+            "\60", "\61", "\62", "\63", "\64", "\65", "\66", "\67",
+            "\68", "\69", "\6A", "\6B", "\6C", "\6D", "\6E", "\6F",
+            "\70", "\71", "\72", "\73", "\74", "\75", "\76", "\77",
+            "\78", "\79", "\7A", "\7B", "\7C", "\7D", "\7E", "\7F";
+
+@function slice($list, $start, $end) {
+    $result: ();
+    @for $i from $start through $end {
+        $result: append($result, nth($list, $i));
+    }
+    @return $result;
+}
+
+@function merge($left, $right, $strcmp) {
+    $result: ();
+    $l_idx: 1;
+    $r_idx: 1;
+    @while $l_idx <= length($left) and $r_idx <= length($right) {
+        @if call(get-function($strcmp), nth($left, $l_idx), nth($right, $r_idx)) <= 0 {
+            $result: append($result, nth($left, $l_idx));
+            $l_idx: $l_idx + 1;
+        } @else {
+            $result: append($result, nth($right, $r_idx));
+            $r_idx: $r_idx + 1;
+        }
+    }
+    @if $l_idx <= length($left) {
+        $result: join($result, slice($left, $l_idx, length($left)));
+    } @else if $r_idx <= length($right) {
+        $result: join($result, slice($right, $r_idx, length($right)))
+    }
+    @return $result;
+}
+
+@function strcmp($left, $right) {
+    $i: 1;
+    $j: 1;
+    @while $i <= length($left) and $j <= length($right) {
+        $l_pt: index($collation, str-slice($left, $i, $i));
+        $r_pt: index($collation, str-slice($right, $j, $j));
+        $diff: $l_pt - $r_pt;
+        @if $diff != 0 {
+            @return $diff
+        }
+        $i: $i + 1;
+        $j: $j + 1;
+    }
+    @if $i > length($left) and $j > length($right) {
+        @return 0;
+    }
+    @if $i > length($left) {
+        @return 1;
+    }
+    // $j > length($right)
+    @return -1;
+}
+
+@function merge-sort($list_to_sort, $strcmp) {
+    $list_length: length($list_to_sort);
+    @if $list_length <= 1 {
+        @return $list_to_sort;
+    }
+    @if $list_length == 2 {
+        @if call(get-function($strcmp), nth($list_to_sort, 1), nth($list_to_sort, 2)) > 0 {
+            @return (nth($list_to_sort, 2), nth($list_to_sort, 1));
+        } @else {
+            @return $list_to_sort;
+        }
+    }
+    $left: merge-sort(slice($list_to_sort, 1, ceil($list_length / 2)), $strcmp);
+    $right: merge-sort(slice($list_to_sort, ceil($list_length / 2) + 1, $list_length), $strcmp);
+    @return merge($left, $right, $strcmp);
+}
+
+@debug merge-sort($list_to_sort, strcmp);

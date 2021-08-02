@@ -1,0 +1,29 @@
+/* Media query #0 */
+
+$h1FS: 20px;
+$h1FS2: 18px;
+$h1FS3: 16px;
+$h1FS4: 14px;
+$h1STC: #1D1D1D;
+
+h1 {
+    font-size:  $h1FS;
+    @media  screen and (max-width: 960px) {
+        & {
+            font-size: $h1FS2;
+        }
+    }
+    @media  screen and (max-width: 640px) {
+        & {
+            font-size: $h1FS3;
+        }
+    }
+    @media  screen and (max-width: 320px) {
+         &{
+            font-size: $h1FS4;
+            &.small {
+                color: $h1STC;
+            }
+        }
+    } 
+}
