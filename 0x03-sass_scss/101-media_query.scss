@@ -3,10 +3,9 @@
 $h1FS: 20px;
 $h1FS2: 14px;
 
-
 h1 {
     font-size:  $h1FS;
-    @media  screen and (max-width: 960px) {
+    @media  screen and (max-width: 320px) {
         & {
             font-size: $h1FS2;
         }
