@@ -1,0 +1,17 @@
+/* Extended */
+
+$fontsizeclassinfo: 12px;
+$textcolorclasssuccess: #00FF00;
+$textcolorclasswarning: #FF0000;
+
+.info  {
+    font-size: $fontsizeclassinfo;
+}
+.success{
+    @extend .info;
+    color: $textcolorclasssuccess;
+}    
+.warning{
+    @extend .info;
+    color: $textcolorclasswarning;
+}
