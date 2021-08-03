@@ -1,0 +1,14 @@
+/* Margin mixin */ 
+$bodymarginleft: 10px;
+$bodymarginright: 10px;
+$divmarginleft: 15px;
+$divmarginright: 15px;
+
+body{
+    margin-left: $bodymarginleft;
+    margin-right: $bodymarginright;
+}
+div {
+    margin-left: $divmarginleft;
+    margin-right: $divmarginright;
+}
