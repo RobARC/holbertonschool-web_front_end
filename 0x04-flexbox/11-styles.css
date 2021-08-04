@@ -518,7 +518,7 @@ ul.row {
       background-position: 50% 0;
     }
 
-    .hero-article::before{
+    .hero-article::before {
       content: "";
       background: rgba(0, 0, 0, 0.8);
       position: absolute;
@@ -535,7 +535,7 @@ ul.row {
       min-height: 40vh;
     }
 
-    .hero-article .section-body{
+    .hero-article .section-body {
       position: relative;
       padding: 7rem 0 0;
       z-index: 2;
