@@ -602,18 +602,17 @@
 .tag-list li:last-child::after {
     content: "";
 }
-.post .img {
+.post img {
     width: 100%;
-    height: 100%;
-}
-.post-content p:first-child {
+    height: auto;
+  }
+  .post-content p::first-child {
     font-size: var(--font-size-x-large);
-}
-
-.post-content .img-caption{
+  }
+  .post-content .img-caption {
     margin: 1rem 0;
     padding: 0 .5rem;
     font-size: var(--font-size-small);
-    color: var(--color-grey);
+    color: var(--color-grey, #a0a0a0);
     text-align: center;
-}
+  }
