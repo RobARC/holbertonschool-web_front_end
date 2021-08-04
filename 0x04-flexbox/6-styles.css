@@ -211,7 +211,7 @@
 
   .nav .nav-item + .nav-item {
     margin: var(--nav-item-margin);
-    }
+  }
   
   .nav .nav-item {
     font-family: var(--nav-item-font-family);
