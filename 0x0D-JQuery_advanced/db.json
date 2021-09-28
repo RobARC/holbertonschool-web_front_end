@@ -1,39 +1,45 @@
 {
-    "posts": [
-      {
-        "id": 1,
-        "title": "One Hundred Years of Solitude ",
-        "author": "Gabriel Garcia Marquez"
-      },
-      {
-        "id": 2,
-        "title": "Chronicle of a Death Foretold",
-        "author": "Gabriel Garcia Marquez"
-      },
-      {
-        "id": 3,
-        "title": "The Farm",
-        "author": "Héctor Abad Faciolince"
-      },
-      {
-        "id": 4,
-        "title": "Delirium",
-        "author": "Laura Restrepo"
-      },
-      {
-        "id": 5,
-        "title": "Leopard in the Sun",
-        "author": "Restrepo"
-      }
-    ],
-    "comments": [
-      {
-        "id": 1,
-        "body": "some comment",
-        "postId": 1
-      }
-    ],
-    "profile": {
-      "name": "typicode"
+  "posts": [
+    {
+      "id": 1,
+      "title": "One Hundred Years of Solitude ",
+      "author": "Gabriel Garcia Marquez"
+    },
+    {
+      "id": 2,
+      "title": "Chronicle of a Death Foretold",
+      "author": "Gabriel Garcia Marquez"
+    },
+    {
+      "id": 3,
+      "title": "The Farm",
+      "author": "Héctor Abad Faciolince"
+    },
+    {
+      "id": 4,
+      "title": "Delirium",
+      "author": "Laura Restrepo"
+    },
+    {
+      "id": 5,
+      "title": "Leopard in the Sun",
+      "author": "Restrepo"
+    },
+    {
+      "author": "Roberth Rondon",
+      "title": "Hola",
+      "id": 6
     }
+    
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
   }
+}
