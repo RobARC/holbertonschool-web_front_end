@@ -1,0 +1,19 @@
+{
+  "name": "0x0e-cookies_local_storage",
+  "version": "1.0.0",
+  "description": "## Resources <b>Read or watch:</b>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^4.3.0"
+  }
+}
